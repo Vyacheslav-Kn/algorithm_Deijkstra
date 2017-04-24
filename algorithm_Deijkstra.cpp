@@ -4,8 +4,8 @@
 using namespace std;
 
 struct graph {
-	int size_num; // количество узлов
-	int edge_num; // количество ребер
+	int size_num; // number of edges
+	int edge_num; // number of verges
 	int** a;
 };
 
@@ -72,7 +72,7 @@ void algoritm_Dijkstra(int** matr_ed, int n, int yzel) {
 		v[i] = 1;
 	}
 
-	cout << "Yzel,ot kotorogo s4itaem: " << yzel << endl;
+	cout << "Input starting edge: " << yzel << endl;
 	d[yzel - 1] = 0;
 
 	for (int i = 0; i < n; i++) {
@@ -135,7 +135,7 @@ int** step_to_Dijkstra(graph* graph) {
 			int l1 = p[0]; int l2 = p[1];
 			mas[l1][l2] = 1 + rand() % 10;
 			mas[l2][l1] = mas[l1][l2];
-			cout << "Cena zvena " << l1 + 1 << l2 + 1 << " (" << l2 + 1 << l1 + 1 << ") : " << mas[l1][l2];
+			cout << "Verge price " << l1 + 1 << l2 + 1 << " (" << l2 + 1 << l1 + 1 << ") : " << mas[l1][l2];
 			cout << endl;
 			k = 0;
 		}
